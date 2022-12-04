@@ -10,14 +10,11 @@
       <title>{{ config('app.name') }}</title>
     @endisset
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
   </head>
 
   <body>
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     @livewireScripts
   </body>
 </html>
