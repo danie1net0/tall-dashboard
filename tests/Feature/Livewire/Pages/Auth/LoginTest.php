@@ -15,14 +15,14 @@ beforeEach(function () {
 
 
 it('should see login page', function () {
-    get(route('auth.login'))
+    get(route('login'))
         ->assertSuccessful()
         ->assertSeeLivewire(Login::class);
 });
 
 it('should redirect to dashboard if user already logged in', function () {
     actingAs(User::factory()->create())
-        ->get(route('auth.login'))
+        ->get(route('login'))
         ->assertRedirect(route('dashboard.home'));
 });
 

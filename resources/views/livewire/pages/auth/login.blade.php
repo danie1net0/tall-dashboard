@@ -22,7 +22,7 @@
           <x-forms.checkbox :label="__('Remember-me')" id="remember" wire:model="remember"/>
 
           <div class="text-sm leading-5">
-            <x-link href="{{ route('auth.password.request') }}">
+            <x-link href="{{ route('password.request') }}">
               @lang('Forgot your password?')
             </x-link>
           </div>
