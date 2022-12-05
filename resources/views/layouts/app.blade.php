@@ -20,5 +20,7 @@
     <main>
       {{ $slot }}
     </main>
+
+    <x-notifications.notifications/>
   </body>
 </html>

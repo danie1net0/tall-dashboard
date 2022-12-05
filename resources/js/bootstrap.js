@@ -3,6 +3,8 @@ import Alpine from 'alpinejs';
 import axios from 'axios';
 import 'phosphor-icons/src/index.js';
 
+import './components';
+
 window._ = _;
 window.Alpine = Alpine
 window.axios = axios;
