@@ -3,15 +3,15 @@
     @lang('Reset password')
   </x-slot:title>
 
-  <x-slot name="subtitle">
+  <x-slot:subtitle>
     @lang('I remembered my password!')
 
     <x-link href="{{ route('login') }}">
       @lang('Sign in')
     </x-link>
-  </x-slot>
+  </x-slot:subtitle>
 
-  <x-slot name="form">
+  <x-slot:form>
     <form wire:submit.prevent="sendResetPasswordLink">
       <div class="grid grid-cols-1 gap-4">
         <x-forms.input icon="ph-at" :label="__('E-mail')" name="email" type="email" wire:model="email"/>
@@ -21,5 +21,5 @@
         </x-button>
       </div>
     </form>
-  </x-slot>
+  </x-slot:form>
 </x-layouts.auth>

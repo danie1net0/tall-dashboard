@@ -20,8 +20,8 @@ Route::get('', Auth\Login::class)->name('home');
 Route::middleware('guest')
     ->group(function () {
         Route::get('login', Auth\Login::class)->name('login');
-        Route::get('recuperar-senha', Auth\ForgotPassword::class)->name('password.request');
-        Route::get('recuperar-senha/{token}', Auth\ResetPassword::class)->name('password.reset');
+        Route::get('forgot-password', Auth\ForgotPassword::class)->name('password.request');
+        Route::get('reset-password/{token}', Auth\ResetPassword::class)->name('password.reset');
     });
 
 Route::prefix('dashboard')

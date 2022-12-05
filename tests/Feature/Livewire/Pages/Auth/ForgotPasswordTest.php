@@ -18,7 +18,7 @@ it('should see forgot password page', function () {
         ->assertSeeLivewire(ForgotPassword::class);
 });
 
-it('should send password reset lin', function () {
+it('should send password reset link', function () {
     /** @var User $user */
     $user = User::factory()->create();
 

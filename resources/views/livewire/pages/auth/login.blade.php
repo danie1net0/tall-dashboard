@@ -6,7 +6,7 @@
   <x-slot:subtitle>
     @lang('Or')
 
-    <x-link href="{{ route('auth.login') }}">
+    <x-link href="{{ route('login') }}">
       @lang('create a new account')
     </x-link>
   </x-slot:subtitle>
