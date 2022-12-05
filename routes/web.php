@@ -24,6 +24,10 @@ Route::middleware('guest')
         Route::get('reset-password/{token}', Auth\ResetPassword::class)->name('password.reset');
     });
 
+Route::middleware('auth')
+    ->get('confirm-password', Auth\ConfirmPassword::class)
+    ->name('password.confirm');
+
 Route::prefix('dashboard')
     ->middleware('verified')
     ->name('dashboard.')
