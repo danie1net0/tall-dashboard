@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    @isset($title)
-      <title>{{ $title }} - {{ config('app.name') }}</title>
+    @hasSection('title')
+      <title>@yield('title') - {{ config('app.name') }}</title>
     @else
       <title>{{ config('app.name') }}</title>
-    @endisset
+    @endif
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     @livewireStyles
+    @livewireScripts
   </head>
 
-  <body>
-    @livewireScripts
+  <body class="h-full">
+    <main>
+      {{ $slot }}
+    </main>
   </body>
 </html>
