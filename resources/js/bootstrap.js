@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import Alpine from 'alpinejs';
 import axios from 'axios';
+import 'phosphor-icons/src/index.js';
 
 window._ = _;
 window.Alpine = Alpine
